@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ayesha Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<style>
+    .bg-img{
+        height: 360px;
+        width: 400px;
+    }
+    .image{
+height: 300px;
+width: 300px;
+    }
+
+    .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  }
+    
+body{
+  cursor: pointer;
+}
+
+
+/* Pastel backgrounds */
+.pastel-blue     { background-color: #d6eaff; }
+.pastel-pink     { background-color: #ffe0f0; }
+.pastel-lavender { background-color: #f0e9ff; }
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-img {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 3px solid #dcdcdc;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -12px;
+  top: 25px;
+  height: 20px;
+  width: 20px;
+  background-color: #ffc107;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px #ffc10788;
+}
+
+/* Pastel colors (reuse existing) */
+.pastel-purple { background-color: #f0e9ff; }
+.pastel-blue   { background-color: #d6eaff; }
+
+    /* Navbar link hover effect */
+.navbar-nav .nav-link {
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+ 
+}
+
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffc107;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active link highlight (optional) */
+.navbar-nav .nav-link.active {
+  color: #ffc107 !important;
+}
+.bg-color {
+  background-color: #f1f1f6;
+}
+
+</style>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+<!-- Animate.css CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<body style="scroll-behavior: smooth;">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-color shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Ayesha</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="#skill">Skills</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<!-- Hero Section with Image -->
+<section class="min-vh-100 d-flex align-items-center bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Text Column -->
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h1 class="display-4 fw-bold">Hi, I'm <span class="text-primary">Ayesha</span></h1>
+          <p class="lead text-muted">I'm a passionate Full Stack Developer, who builds elegant and efficient digital solutions.</p>
+          <div class="mt-4">
+            <a href="#portfolio" class="btn btn-primary btn-lg me-2">Hire Me</a>
+            <a href="#contact" class="btn btn-outline-primary btn-lg">View Portfolio</a>
+          </div>
+        </div>
+        <!-- Image Column -->
+        <div class="col-lg-6 text-center">
+          <img src="https://img.freepik.com/free-photo/pretty-brunette-girl-blue-shirt-sitting-table-office-she-is-typing-laptop-looks-happy_197531-25024.jpg?ga=GA1.1.719345581.1728289465&semt=ais_hybrid&w=740" class="img-fluid rounded-circle shadow bg-img" alt="Hero Image">
+        </div> 
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- About Me Section -->
+<section class="py-5" id="about">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Image -->
+        <div class="col-md-5 mb-4 mb-md-0 text-center">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToy_FrIlBXSsnZGtVHIViQs6X3z690s0Dwzw&s" class="img-fluid rounded-circle shadow image" alt="Your Name">
+        </div>
+        
+        <!-- Text -->
+        <div class="col-md-7">
+          <h2 class="fw-bold">About Me</h2>
+          <p class="text-muted">
+     Hey! I'm  <strong>Ayesha</strong>, a beginner full stack developer currently learning modern web technologies. I enjoy building responsive, user-friendly websites and am currently improving my skills in JavaScript, Node.js, MongoDB, and React. I love turning ideas into real applications and constantly strive to learn more!
+          </p>
+          <p class="text-muted">
+            With 6 months of experience, I’ve worked on a range of projects—from small business websites to full-scale apps. I'm always learning and constantly looking for ways to improve my craft.
+          </p>
+          <a href="#contact" class="btn btn-outline-primary mt-3">Let’s Connect</a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+
+
+  <!-- Skills / Tech Stack Section -->
+<section class="py-5" id="skills" style="background-color: #f9f9fb;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Skills & Tech Stack</h2>
+        <p class="text-muted">Here’s what I use to design, build, and ship things on the web.</p>
+      </div>
+  
+      <div class="row text-center gy-4">
+        
+        <!-- Frontend -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0 animate__animated animate__fadeInUp" style="background-color: #ffe0ec;">
+            <div class="card-body shadow">
+              <h5 class="card-title fw-semibold">Frontend</h5>
+              <p class="text-muted mb-0">
+                HTML5, CSS3, JavaScript (ES6+), React.js, Bootstrap 5, Jquery, Tailwind CSS, Next.js
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Backend -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0 animate__animated animate__fadeInUp animate__delay-1s" style="background-color: #d1f4ff;">
+            <div class="card-body shadow">
+              <h5 class="card-title fw-semibold">Backend</h5>
+              <p class="text-muted mb-0">
+                Node.js, Express.js, MongoDB, MySQL, REST APIs, Firebase, JWT Auth
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Tools & Workflow -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0 animate__animated animate__fadeInUp animate__delay-2s" style="background-color: #e1f7d5;">
+            <div class="card-body shadow">
+              <h5 class="card-title fw-semibold">Tools & Workflow</h5>
+              <p class="text-muted mb-0">
+                Git & GitHub, VS Code, Postman, Figma, Netlify, Vercel, npm, Trello
+              </p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Skills -->
+  <section id="skill" class="py-5 fade-in-section">
+    <div class="container">
+      <h2 class="text-center mb-4"></h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h6>HTML & CSS</h6>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-success" style="width: 90%;">90%</div>
+          </div>
+          <h6>JavaScript</h6>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-warning" style="width: 75%;">75%</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h6>Node.js</h6>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-info" style="width: 65%;">65%</div>
+          </div>
+          <h6>MongoDB</h6>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-danger" style="width: 60%;">60%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- What I Do / Services Section -->
+<section class="py-5" id="services" style="background-color: #fefefe;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">What I Do</h2>
+        <p class="text-muted">I combine creativity, code, and problem-solving to build experiences people love.</p>
+      </div>
+  
+      <div class="row text-center gy-4">
+  
+        <!-- Web Design -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-lg border-0 service-card animate__animated animate__fadeInUp" style="background-color: #fff0f5;">
+            <div class="card-body py-5">
+              <div class="mb-3">
+                <i class="bi bi-palette-fill fs-1 text-pink"></i>
+              </div>
+              <h5 class="fw-semibold">Web Design</h5>
+              <p class="text-muted">Clean, responsive, and user-friendly designs using modern UI/UX principles and tools like Figma.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Frontend Development -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-lg border-0 service-card animate__animated animate__fadeInUp animate__delay-1s" style="background-color: #e0f7fa;">
+            <div class="card-body py-5">
+              <div class="mb-3">
+                <i class="bi bi-code-slash fs-1 text-info"></i>
+              </div>
+              <h5 class="fw-semibold">Frontend Development</h5>
+              <p class="text-muted">Building high-performance, scalable interfaces with React.js, Bootstrap, and modern JavaScript.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Full Stack Solutions -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-lg border-0 service-card animate__animated animate__fadeInUp animate__delay-2s" style="background-color: #e6ffe6;">
+            <div class="card-body py-5">
+              <div class="mb-3">
+                <i class="bi bi-server fs-1 text-success"></i>
+              </div>
+              <h5 class="fw-semibold">Full Stack Solutions</h5>
+              <p class="text-muted">From backend APIs to frontend interactions, I deliver complete web apps using the MERN stack.</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+  <section id="projects" class="py-5 bg-light fade-in-section">
+    <div class="container">
+      <h2 class="text-center mb-5">My Projects</h2>
+      <div class="row g-4">
+  
+        <!-- Project Card -->
+        <div class="col-md-4">
+          <div class="card project-card pastel-blue shadow text-center p-3">
+            <h5 class="card-title">To-Do App</h5>
+            <p class="card-text">Manage daily tasks using Local Storage & JavaScript.</p>
+            <button class="btn btn-warning view-btn">View Project</button>
+            <div class="project-img mt-3" style="display: none;">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-cPJcFVEloJmaRAV7S8L2MpYApCeUFIeGqg&s" class="img-fluid rounded shadow" alt="Project">
+            </div>
+          </div>
+        </div>
+  
+        <!-- Another Card -->
+        <div class="col-md-4">
+          <div class="card project-card pastel-pink shadow text-center p-3">
+            <h5 class="card-title">Weather App</h5>
+            <p class="card-text">Real-time weather using OpenWeather API.</p>
+            <button class="btn btn-warning view-btn">View Project</button>
+            <div class="project-img mt-3" style="display: none;">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3acMtVA899Vmdntfi9FXjmSpSQySP9YCaQwxOkapgevw8ie6SiZVwjI0sNnEJF3DM8yQ&usqp=CAU" class="img-fluid rounded shadow" alt="Weather App">
+            </div>
+          </div>
+        </div>
+  
+        <!-- Another Card -->
+        <div class="col-md-4">
+          <div class="card project-card pastel-lavender shadow text-center p-3">
+            <h5 class="card-title">Portfolio Site</h5>
+            <p class="card-text">Responsive personal site using Bootstrap 5.</p>
+            <button class="btn btn-warning view-btn">View Project</button>
+            <div class="project-img mt-3" style="display: none;">
+              <img src="https://10web.io/wp-content/themes/10web-theme/images/industry-pages/student_portfolio.png" class="img-fluid rounded shadow" alt="Portfolio Site">
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+  <script>
+    // View Project Button Logic
+document.querySelectorAll(".view-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const img = btn.nextElementSibling;
+    img.style.display = img.style.display === "none" ? "block" : "none";
+  });
+});
+
+  </script>
+  
+
+  <section id="education" class="py-5 fade-in-section bg-white">
+    <div class="container">
+      <h2 class="text-center mb-5">My Education </h2>
+      <div class="timeline">
+  
+        <!-- Item 1 -->
+        <div class="timeline-item pastel-purple shadow-sm">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5><i class="fas fa-flask me-2"></i>BSc in Chemistry (Specialization)</h5>
+            <p class="mb-1">DPRC College | 2022 – 2025</p>
+            <small>Currently in 3rd year, focusing on analytical chemistry, lab research, and scientific studies.</small>
+          </div>
+        </div>
+  
+        <!-- Item 2 -->
+        <div class="timeline-item pastel-blue shadow-sm">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h5><i class="fas fa-laptop-code me-2"></i>Full Stack Development Course</h5>
+            <p class="mb-1">A2Z It HUB | 2025 – Present</p>
+            <small>Learning front-end, back-end, databases, and building responsive apps,websites.</small>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Scroll fade-in for all sections
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll(".fade-in-section").forEach(el => observer.observe(el));
+
+  </script>
+  
+
+  <!-- Contact -->
+  <section id="contact" class="py-5 fade-in-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+      <form id="contactForm" class="mx-auto" style="max-width: 500px;">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark w-100 shadow">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div>Connect with me: 
+      <a href="#" class="text-warning mx-2"><i class="fab fa-github"></i></a>
+      <a href="#" class="text-warning mx-2"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <small>&copy; 2025 Ayesha | Full Stack Dev Beginner</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+ 
+
+    
+</body>
+</html>
